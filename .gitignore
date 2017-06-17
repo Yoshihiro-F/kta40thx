@@ -1,0 +1,13 @@
+*.pyc
+*.pyo
+*.db
+.DS_Store
+.coverage
+local_settings.py
+/static
+.hgignore
+fabfile.py
+nohup.out
+sudo
+deploy
+
