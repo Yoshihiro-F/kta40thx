@@ -1,0 +1,13 @@
+<div class="col-md-3 footers left" id="Information">
+<p class="row"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><span> 活動日</span><br>{{ active_date }}</p>
+<p class="row"><span class="glyphicon glyphicon-tree-conifer" aria-hidden="true"></span><span> 活動場所</span><br>{{ active_place }}</p>
+<p class="row"><span class="glyphicon glyphicon-user" aria-hidden="true"></span><span> 会員人数</span><br>約{{ member_numbers }}名ほど</p>
+<p class="row"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span><span> 会費</span><br>{{ member_charges }}</p>
+</div>
+<address>
+<div class="col-md-3 footers center" id="Contact">
+<p class="row"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span><span> 連絡先</span><br>{{ contact_to }}</p>
+<p class="row"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><span> メールアドレス</span><br><a href="mailto:{{ mail_address }}">{{ mail_address }}</a></p>
+<p class="row"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span><span> 住所</span><br><a href="http://maps.google.com/maps?q={{ address_place }}">{{ address_place }}</a></p>
+</div>
+    </address>

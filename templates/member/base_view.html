@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block meta_title %}幹部紹介{% endblock %}
+{% block extra_head %}
+<meta name="robots" content="noindex">
+    <style>
+        div h2{color:white;}
+        div hr{padding: 0; border: none; border-top: medium double white; color: white; text-align: center;}
+        #member img{height:100px; margin:10px auto;}
+        #member{color:black; background-color:rgba(255,246,209, 0.8); min-height:20vw; margin:4.16666%; border-color:rgba(255,246,209, 0.8); border-radius: 6px; border-style:outset;}
+        #member p{margin:10px;}
+        #member h3,#member h4,#member p{text-shadow:-0.5px -0.5px 0px #fff, 0.5px -0.5px 0px #fff, 0.5px 0.5px 0px #fff, -0.5px 0.5px 0px #fff;}
+    @media screen and (min-width: 992px){
+        #member{display:table-cell;}
+    }
+    </style>
+{% endblock %}
+
+    {% block main %}
+    <div style="padding:2.5vw 5vw;">
+       <h2 class="text-center">幹部紹介</h2>
+    <hr>
+    {% if members %}
+        {% for member in members %}
+            {% if member.display == True %}
+            <div id="member" class="col-sm-5 text-center">
+            <div class="col-xs-12 text-center">
+            {% if member.image == "" %}
+             <img class="img-responsive img-thumbnail" src="{% static "image/" %}{{ noimage }}">
+                {% else %}
+             <img class="img-responsive img-thumbnail" src="{% static "media/" %}{{ member.image }}">
+            {% endif %}
+            </div>
+            <div class="row">
+        <h3>{{ member.memname }}</h3>
+        <h4>{{ member.position }}</h4>
+        <p>{{ member.itself }}</p>
+            </div>
+            </div>
+        {% else %}
+        {% endif %}
+        {% endfor %}
+        {% else %}
+        {% endif %}
+    </div>
+    {% endblock %}

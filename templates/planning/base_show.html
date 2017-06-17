@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load mezzanine_tags %}
+{% block meta_title %}活動日程:{{ yearing }}年度{% endblock %}
+{% block extra_head %}
+<meta name="robots" content="noindex">
+    <style>
+     #planlist{background-color:rgba(255,255,255,1); border-radius:6px; padding:0.5vw; text-align:center; margin:5vw 3vw 3vw; color:black;}
+     #planning{color:white; }
+     #planning th{text-align:center;}
+    </style>
+{% endblock %}
+
+{% block right_paneloriginal %}
+    <div id="planlist" class="visible-xs visible-sm visible-md visible-lg col-md-2">
+    <h4>年度一覧</h4>
+    {% if yearslist %}
+    {% for yearlist in yearslist %}
+        <a href="/~yoshihiro/kta40thx/planning/{{ yearlist }}/">{{ yearlist }}</a><br>
+    {% endfor %}
+    {% else %}
+    {% endif %}
+    </div>
+    <div class="col-md-3 col-sm-12 right hidden-xs hidden-sm">
+    <div class="panel panel-default">
+    <div class="panel-body">
+    {% block right_panel %}
+    {% ifinstalled mezzanine.twitter %}
+    {% include "twitter/tweets.html" %}
+    {% endifinstalled %}
+    {% endblock %}
+    </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block main %}
+    <div id="planning">
+    <h3 style="text-align:center;">活動日程</h3>
+    {% if yearing %}
+        <h4>{{ yearing }}年度</h4>
+        <table class="table table-bordered ">
+            <thead>
+            <tr>
+                <th>月</th>
+                <th>イベント</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for month in monthlist %}
+            {% if month.eve_month == "" %}
+
+            {% else %}
+                <tr>
+                <th>{{ month.eve_month }}月</th>
+                <td> {{ month.evently }}</td>
+                </tr>
+            {% endif %}
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+    {% endif %}
+    </div>
+{% endblock %}

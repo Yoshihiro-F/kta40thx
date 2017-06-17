@@ -1,0 +1,15 @@
+{% load i18n pages_tags %}
+{% spaceless %}
+    {% block header_menu %}
+    <ul class="nav navbar-nav navori" style="margin: -3.5px -15px;">
+    <li class="dropdown {% if request.path == "/~yoshihiro/kta40thx/" %}active{% endif %}"><a class="nav-base" href="/~yoshihiro/kta40thx/">Home</a></li>
+    <li class="dropdown {% if request.path == "/~yoshihiro/kta40thx/intro/" %}active{% endif %}"><a class="nav-base" href="/~yoshihiro/kta40thx/intro/">活動詳細</a></li>
+    <li class="dropdown {% if request.path == "/~yoshihiro/kta40thx/planning/" %}active{% endif %}"><a class="nav-base" href="/~yoshihiro/kta40thx/planning/">活動日程</a></li>
+    <li class="dropdown {% if request.path == "/~yoshihiro/kta40thx/member/" %}active{% endif %}"><a class="nav-base" href="/~yoshihiro/kta40thx/member/">幹部紹介</a></li>
+    <li class="dropdown {% if request.path == "/~yoshihiro/kta40thx/galleries/" %}active{% endif %}"><a class="nav-base" href="/~yoshihiro/kta40thx/gallery/">Gallery</a></li>
+    <li class="dropdown {% if request.path == "/~yoshihiro/kta40thx/blog/" %}active{% endif %}"><a class="nav-base" href="/~yoshihiro/kta40thx/blog/">Blog</a></li>
+    <li class="dropdown {% if request.path == "/~yoshihiro/kta40thx/kanbu/" %}active{% endif %}"><a class="nav-base" href="/~yoshihiro/kta40thx/kanbu/">管理画面</a></li>
+    </ul>
+    {% endblock %}
+
+{% endspaceless %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block meta_title %}Gallery{% endblock %}
+{% block extra_head %}
+<meta name="robots" content="noindex">
+    <style>
+      .imgbox{height:auto; min-height:225px;}
+      #gallery{min-height:80vh;}
+      #gallery img{width:100%; margin-top:2vw;}
+      #gallery h3{color:white;text-align:center;}
+      #gallery a{color:white;}
+      #gallery a:hover{color:yellow;}
+    </style>
+{% endblock %}
+{% block main %}
+    <div id="gallery">
+    <h3>Gallery</h3>
+    {% for dirs in dir %}
+        {% if dirs != ".DS_Store" and dirs != ".thumbnails" %}
+        <div class="col-xs-6 col-sm-4 col-md-3 imgbox text-center">
+        <a href="/~yoshihiro/kta40thx/gallery/{{ dirs }}/">
+            <img class="img-rounded" src="{% static "image/bookalbumi.png" %}"><br>
+        {{ dirs }}
+        </a>
+        </div>
+        {% else %}
+
+        {% endif %}
+    {% endfor %}
+    </div>
+{% endblock %}

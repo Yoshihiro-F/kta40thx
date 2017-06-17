@@ -1,0 +1,25 @@
+{% load mezzanine_tags %}
+{% block extra_head %}
+    <style>
+     .footers{border-style:double; margin:5vh 2.777777%;}
+    #Information, #Contact{ padding:7vh;}
+    #links{padding:2vw;}
+    #links p{padding:0.5vw auto;}
+    .footers span{font-size:120%;}
+    #footer a{color:white;}
+    #footer a:hover{color:yellow;}
+    </style>
+{% endblock %}
+
+{% spaceless %}
+{% block footer_nav %}
+    <h2 class="text-center">Information</h2>
+    <div class="clearfix">
+    <!--ここに内容書いて！-->
+    <!--mezzanine/core/templates/includes/result1,2.html-->
+    <!--mezzanine/core/templatetags/mezzanine_tags.py-->
+    {% footerview1 %}
+    {% footerview2 %}
+    </div>
+{% endblock %}
+{% endspaceless %}
