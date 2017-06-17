@@ -7,7 +7,7 @@ Kta Old HomePage code
 ####The only function of "blog" is no change from Mezzanine because it is very good function for me.
 
 ## Demo
-[http://gms.gdl.jp/~yoshihiro/kta40thx](http://gms.gdl.jp/~yoshihiro/kta40thx)
++ [http://gms.gdl.jp/~yoshihiro/kta40thx](http://gms.gdl.jp/~yoshihiro/kta40thx)
 
 ## Constitution
 #### Each One page has one function. (All page have same "footer". Only "footer" is common function.)
