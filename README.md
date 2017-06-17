@@ -24,5 +24,5 @@ Kta Old HomePage code
 + Mezzanine 4.1.0
 
 ## Author
-Yoshihiro-F (2016/4)
++ Yoshihiro-F (2016/4)
 
